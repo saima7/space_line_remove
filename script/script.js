@@ -2,8 +2,10 @@
 function myFunction(){
     var input= document.getElementById("input").value;
     var output = document.getElementById("output");
-    var remove_space =input.replace(/\s+/g,' ');
+    var begin_space = input.replace(/^\s*/gm, '');
+    var remove_space =begin.replace(/\s+ /g,' ');
     var remove_line=remove_space.replace(/[\r\n]+/g, '\n');
+   
 
     
         var text = '';
@@ -11,22 +13,24 @@ function myFunction(){
         for (var i = 0; i < remove_line.length; i++) {
            
           if(remove_line[i]=="\n"){
-            total=0;
             text +="\n";
+            total=0;
           }
           else if(remove_line[i]==' '){
              total+=1;
+             text += remove_line[i];
              if (total==10) 
              {
                  text +="\n";
-                 total=0;
-                 continue;
+                 total=0; 
+                 //continue;               
              } 
-             text += remove_line[i];
+            
+             //text += remove_line[i];
            }
            else{
              text += remove_line[i];
            }  
         }    
      output.innerHTML= text;
-}
+  }
