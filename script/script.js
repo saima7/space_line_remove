@@ -3,7 +3,7 @@ function myFunction(){
     var input= document.getElementById("input").value;
     var output = document.getElementById("output");
     var begin_space = input.replace(/^\s*/gm, '');
-    var remove_space =begin.replace(/\s+ /g,' ');
+    var remove_space =begin_space.replace(/\s+ /g,' ');
     var remove_line=remove_space.replace(/[\r\n]+/g, '\n');
    
 
