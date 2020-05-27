@@ -18,15 +18,13 @@ function myFunction(){
           }
           else if(remove_line[i]==' '){
              total+=1;
-             text += remove_line[i];
              if (total==10) 
              {
                  text +="\n";
                  total=0; 
-                 //continue;               
+                 continue;               
              } 
-            
-             //text += remove_line[i];
+             text += remove_line[i];
            }
            else{
              text += remove_line[i];
