@@ -13,6 +13,7 @@ function myFunction(){
         for (var i = 0; i < remove_line.length; i++) {
            
           if(remove_line[i]=="\n"){
+            text = text.trim();
             text +="\n";
             total=0;
           }
@@ -27,8 +28,9 @@ function myFunction(){
              text += remove_line[i];
            }
            else{
-             text += remove_line[i];
+             text += remove_line[i];         
            }  
-        }    
+        }   
+     text = text.trim();    
      output.innerHTML= text;
   }
